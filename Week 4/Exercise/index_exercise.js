@@ -35,14 +35,9 @@ async function train() {
 
       // YOUR CODE HERE
       tf.layers.flatten({inputShape: mobilenet.outputs[0].shape.slice(1)}),
-      tf.layers.dense({
-        units: 100,
-        activation: "relu"
-      }),
-      tf.layers.dense({
-        units: 5,
-        activation: "softmax"
-      })
+      tf.layers.dense({units: 100, activation: 'relu'}),
+      tf.layers.dense({units: 5, activation: 'softmax'})
+   
     ]
   });
 
